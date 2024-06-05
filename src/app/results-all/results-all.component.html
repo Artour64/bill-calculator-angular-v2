@@ -1,0 +1,8 @@
+<app-result title="Tip Amount:" data="{{tipAmountD}}"></app-result>
+<app-result title="Total With Tip:" data="{{totalD}}"></app-result>
+<app-results-per-person
+    *ngIf="showSplitD=='true'"
+    billSplit="{{billSplitD}}"
+    tipSplit="{{tipSplitD}}"
+    totalSplit="{{totalSplitD}}"
+></app-results-per-person>

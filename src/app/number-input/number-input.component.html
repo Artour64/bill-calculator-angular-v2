@@ -1,0 +1,4 @@
+<div style="display: flex; width: 18em;">
+    <div style="width: 13em;"><label for="{{inputId}}">{{title}}</label></div>
+    <input  [(ngModel)]="data" id="{{inputId}}" style="width: 5em;" type="number" value="{{data}}"(ngModelChange)="signal($event)">
+</div>

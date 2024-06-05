@@ -1,0 +1,13 @@
+<div style="display: flex; width: 18em;">
+    <div style="width: 13em;"><label for="tip">Tip (%)</label></div>
+    <select [(ngModel)]="selected" name="tip" id="tip" (ngModelChange)="emitSelected($event)">
+        <option value=0>0</option>
+        <option value=10>10</option>
+        <option value=15>15</option>
+        <option value=20>20</option>
+        <option value=-1>custom</option>
+    </select>
+</div>
+<div *ngIf="selected == -1">
+    <app-number-input #customAmountInput (dataOut)="emitCustomAmount($event)" title="Custom Tip Amount ($)" id="tip_custom"></app-number-input>
+</div>

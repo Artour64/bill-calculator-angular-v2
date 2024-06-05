@@ -1,0 +1,27 @@
+<div>
+    <div style="width: 18em;">
+        <h3 style="margin-top: 0; margin-bottom: 5px; text-align:center;">
+            Tip Calculator
+        </h3>
+    </div>
+    <app-input-form
+        #form
+        (billOut)="bill=$event;"
+        (selectedOut)="tipPercent=$event;"
+        (customAmountOut)="tipCustomAmount=$event;"
+        (peopleOut)="people=$event"
+    ></app-input-form>
+    <app-results-all 
+        showSplitD="{{showSplit}}"
+        tipAmountD="{{tipAmount}}"
+        totalD="{{total}}"
+        billSplitD="{{billSplit}}"
+        tipSplitD="{{tipSplit}}"
+        totalSplitD="{{totalSplit}}"
+    ></app-results-all>
+    <div style="width: 18em">
+        <button type="button"  style="width: 100%" (click)="form.reset();">
+            Reset
+        </button> 
+    </div>
+</div>
