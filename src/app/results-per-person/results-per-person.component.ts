@@ -1,5 +1,6 @@
-import { Component,Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ResultComponent } from '../result/result.component';
+import { CalculatorService } from '../calculator.service';
 
 @Component({
   selector: 'app-results-per-person',
@@ -9,13 +10,5 @@ import { ResultComponent } from '../result/result.component';
   styleUrl: './results-per-person.component.css'
 })
 export class ResultsPerPersonComponent {
-
-  @Input()
-  billSplit: string = "0";
-  
-  @Input()
-  tipSplit: string = "0";
-
-  @Input()
-  totalSplit: string = "0";
+  constructor(public calculator: CalculatorService) {}
 }

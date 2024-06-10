@@ -1,4 +1,14 @@
-<app-number-input #billInput title="Bill ($)" id="bill" (dataOut)="billSignal($event);"></app-number-input>
-<app-tip-input #tipInput (selectedOut)="tipPercentSignal($event);" (customAmountOut)="tipCustomAmountSignal($event);"></app-tip-input>
-<app-number-input #peopleInput title="Number of People:" id="people" [data]=1 (dataOut)="peopleSignal($event);"></app-number-input>
+<app-number-input
+    title="Bill ($)"
+    inputId="bill"
+    [data]="calculator.bill"
+    (dataOut)="calculator.bill = $event"
+></app-number-input>
+<app-tip-input></app-tip-input>
+<app-number-input
+    title="Number of People:"
+    inputId="people"
+    [data]="calculator.people"
+    (dataOut)="calculator.people = $event;"
+></app-number-input>
 

@@ -1,4 +1,4 @@
-import { Component, Input, Output,EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -18,17 +18,9 @@ export class NumberInputComponent {
   @Input()
   data: number = 0;
 
-  @Output() dataOut = new EventEmitter<any>();
+  @Output() dataOut = new EventEmitter<number>();
 
-  signal(event:any) {
+  signal() {
     this.dataOut.emit(this.data);
-  }
-
-  reset(): void {
-    this.data = 0;
-  }
-
-  set(data: any): void {
-    this.data = Number(data);
   }
 }
